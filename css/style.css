@@ -420,7 +420,7 @@ a:hover {
 
 .navbar-b.navbar-trans .nav-link,
 .navbar-b.navbar-reduce .nav-link {
-  color: #fff;
+  color: #FFC107;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -459,7 +459,7 @@ a:hover {
 }
 
 .navbar-b.navbar-trans .nav-link:before {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .navbar-b.navbar-trans .nav-link:hover {
@@ -508,9 +508,12 @@ a:hover {
 }
 
 .navbar-b .navbar-brand {
-  color: #fff;
+  color: #FFC107;
   font-size: 1.6rem;
-  font-weight: 600;
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
 }
 
 .navbar-b .navbar-nav .dropdown-item.show .dropdown-menu,
@@ -533,7 +536,7 @@ a:hover {
 
 .navbar-b .dropdown-menu .dropdown-item:hover {
   background-color: #0078ff;
-  color: #fff;
+  color: #ffffff;
   transition: all 500ms ease;
 }
 
@@ -554,7 +557,7 @@ a:hover {
 
 .navbar-toggler span {
   display: block;
-  background-color: #fff;
+  background-color: #FFC107;
   height: 3px;
   width: 25px;
   margin-top: 4px;
@@ -623,14 +626,19 @@ a:hover {
 }
 
 .intro .intro-title {
-  color: #fff;
+  font-family: "Orbitron" , sans-serif;
+  /* font-optical-sizing: auto; */
+  font-style: normal;
+  color: #FFC107;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .intro .intro-subtitle {
   font-size: 1.5rem;
   font-weight: 300;
+  font-family: "Google Sans Code", monospace;
+  font-style: normal;
 }
 
 .intro .text-slider-items {
@@ -1265,5 +1273,7 @@ footer .credits a {
 }
 
 /* ---------------------------------------------- */
-
+.container H1{
+  color:red;
+}
 /* ---------------------------------------------- */

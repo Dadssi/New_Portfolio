@@ -1,3 +1,26 @@
+<?php
+require_once "../includes/config.php";
+require_once "../includes/functions.php";
+
+// $id = (int)($_GET['id'] ?? 0);
+$id = 1;
+$article = $conn->query("SELECT * FROM articles WHERE id=$id")->fetch_assoc();
+if(!$article) die("Article introuvable.");
+
+// Ajout commentaire
+$msg=""; $err="";
+if($_SERVER['REQUEST_METHOD']==='POST'){
+  $name = trim($_POST['name'] ?? "Anonyme");
+  $comment = trim($_POST['comment'] ?? "");
+  if($comment===""){ $err="Commentaire requis."; }
+  else{
+    $stmt=$conn->prepare("INSERT INTO comments (article_id, name, comment) VALUES (?,?,?)");
+    $stmt->bind_param("iss", $id, $name, $comment);
+    if($stmt->execute()) $msg="Merci pour votre commentaire.";
+    else $err="Erreur, réessayez.";
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,18 +121,18 @@
         <div class="col-md-8">
           <div class="post-box">
             <div class="post-thumb">
-              <img src="img/post-1.jpg" class="img-fluid" alt="">
+              <img src="<?= e($article['image']) ?>" class="img-fluid" alt="">
             </div>
             <div class="post-meta">
-              <h1 class="article-title">Lorem ipsum dolor sit amet consec tetur adipisicing</h1>
+              <h1 class="article-title"><?= e($article['title']) ?></h1>
               <ul>
                 <li>
                   <span class="ion-ios-person"></span>
-                  <a href="#">Jason London</a>
+                  <a href="#"><?= e($article['writer']) ?></a>
                 </li>
                 <li>
                   <span class="ion-pricetag"></span>
-                  <a href="#">Web Design</a>
+                  <a href="#"><?= e($article['domain']) ?></a>
                 </li>
                 <li>
                   <span class="ion-chatbox"></span>
