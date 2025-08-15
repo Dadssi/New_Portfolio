@@ -1,0 +1,87 @@
+body { 
+    font-family: Arial; 
+}        
+.dashboard { 
+    max-width: 800px; 
+    margin: auto; 
+}
+.card { 
+    background: #fff; 
+    padding: 20px; 
+    margin: 10px; 
+    border-radius: 5px; 
+    display: inline-block; 
+    width: 30%; 
+    text-align: center; 
+}
+.card h3 { 
+    margin: 0; 
+    color:#000
+}
+.card p { 
+    margin: 0; 
+    color:#000
+}
+a.button { 
+    display: block; 
+    padding: 10px; 
+    margin-top: 10px; 
+    background: #333; 
+    color: #fff; 
+    text-decoration: none; 
+    border-radius: 3px; 
+}
+a.button:hover { 
+    background: #555; 
+}
+/* ================================================= */
+.dash-main-container { 
+    display: flex;
+    width: 100vw ;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+}
+.dash-sidebar { 
+    width: 20%;  
+    padding: 20px; 
+    box-shadow: 2px 0 5px rgba(14, 210, 102, 0.5); 
+}
+.dash-sidebar h2{
+    text-align: center;
+    color: #0ed266;
+    font-size: 24px;
+    margin-bottom: 60px;
+}
+.dash-sidebar ul{
+    list-style: none;
+    padding: 0; 
+}
+.dash-sidebar ul li{ 
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-image: linear-gradient(to left, #0ed266, #054522);
+    text-align: center;
+    transition: all 3s ease;
+}
+.dash-sidebar ul li:hover{ 
+    background-image: linear-gradient(to right, #0ed266, #054522);
+}
+.dash-sidebar ul li a{
+    text-decoration: none;
+    color: #000;
+    transition: all 0.5s ease;
+}
+/* .dash-sidebar ul li a:hover{
+    color: #000;
+    background: #0ed266;
+    padding: 20px 10px;
+    scale: 1.1;
+} */
+.dash-content{
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 20px;
+}

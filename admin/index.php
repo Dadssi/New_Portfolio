@@ -132,7 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <!--/ Intro Skew End /-->
 
   <!-- ------------------------------------------------- -->
-   <div id="home" class="intro route bg-image" style="background-image: url(../img/intro-bg.jpg)">
+   <div id="home" class="intro route bg-image" style="background-image: url(../img/intro-background.jpg)">
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
         <div class="table-cell">

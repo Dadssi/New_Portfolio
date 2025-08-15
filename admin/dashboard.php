@@ -13,50 +13,7 @@ $total_comments = $conn->query("SELECT COUNT(*) AS total FROM comments")->fetch_
 <head>
     <meta charset="UTF-8">
     <title>Tableau de Bord Admin</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <style>
-        body { font-family: Arial; background: #f4f4f4; padding: 20px; }
-        .dashboard { max-width: 800px; margin: auto; }
-        .card { background: #fff; padding: 20px; margin: 10px; border-radius: 5px; display: inline-block; width: 30%; text-align: center; }
-        .card h3 { margin: 0; }
-        a.button { display: block; padding: 10px; margin-top: 10px; background: #333; color: #fff; text-decoration: none; border-radius: 3px; }
-        a.button:hover { background: #555; }
-        /* ------------------------------------------------- */
-        .dash-main-container { 
-            display: flex;
-            width: 100vw 
-            height: 100vh;
-            background: #000;
-            color: #fff;
-        }
-        .dash-sidebar { 
-            width: 20%;  
-            padding: 20px; 
-            /* box-shadow: 2px 0 5px rgba(0,0,0,0.5);  */
-
-        }
-        .dash-sidebar ul{
-            list-style: none;
-            padding: 0; 
-        }
-        .dash-sidebar ul li{ 
-            border-bottom: 1px solid #444;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-        .dash-sidebar ul li a{
-            text-decoration: none;
-            padding: 0; 
-        }
-        .dash-content{
-            display:flex;
-            flex-direction: column;
-            width: 80%;
-            padding: 20px;
-
-        }
-        /* ------------------------------------------------- */
-    </style>
+    <link rel="stylesheet" href="../css/dashboard-style.css">
 </head>
 <body>
     <div class="dash-main-container">
@@ -99,12 +56,6 @@ $total_comments = $conn->query("SELECT COUNT(*) AS total FROM comments")->fetch_
 
         </div>
     </div>
-
-
-
-
-
-
 
 
 

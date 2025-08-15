@@ -8,7 +8,7 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
+  <link href="img/favicon.jpg" rel="icon">
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Bootstrap CSS File -->
@@ -71,7 +71,7 @@
   <!--/ Nav End /-->
 
   <!--/ Intro Skew Star /-->
-  <div id="home" class="intro route bg-image" style="background-image: url(img/intro-bg.jpg)">
+  <div id="home" class="intro route bg-image" style="background-image: url(img/intro-background.jpg)">
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
       <div class="table-cell">
@@ -96,7 +96,7 @@
                 <div class="row">
                   <div class="col-sm-6 col-md-5">
                     <div class="about-img">
-                      <img src="img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                      <img src="img/dadssi.jpg" class="img-fluid rounded b-shadow-a" alt="">
                     </div>
                   </div>
                   <div class="col-sm-6 col-md-7">
@@ -755,10 +755,10 @@
                   </div>
                   <div class="socials">
                     <ul>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-twitter"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-pinterest"></i></span></a></li>
+                      <li><a href="https://www.facebook.com/share/15qiA88SWe/?mibextid=wwXIfr"><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
+                      <li><a href="https://www.instagram.com/dadssi_med?igsh=aTRlc2JwamM3NTR5&utm_source=qr"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
+                       <li><a href="https://github.com/Dadssi"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
+                      <li><a href="https://www.pinterest.com/dadssim/"><span class="ico-circle"><i class="ion-social-pinterest"></i></span></a></li>
                     </ul>
                   </div>
                 </div>
