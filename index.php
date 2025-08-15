@@ -382,7 +382,7 @@
               Portfolio
             </h3>
             <p class="subtitle-a">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              The result of discipline and creativity, where every accomplishment aims to transform an idea into a digital solution with a tangible impact.
             </p>
             <div class="line-mf"></div>
           </div>
@@ -391,16 +391,16 @@
       <div class="row">
         <div class="col-md-4">
           <div class="work-box">
-            <a href="img/work-1.jpg" data-lightbox="gallery-mf">
+            <a href="img/langgo-img.jpg" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/work-1.jpg" alt="" class="img-fluid">
+                <img src="img/langgo-img.jpg" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Lorem impsum dolor</h2>
+                    <h2 class="w-title">Landing Page</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                      <span class="w-ctegory">Web Developement</span> / <span class="w-date">Avr 2025</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -415,16 +415,16 @@
         </div>
         <div class="col-md-4">
           <div class="work-box">
-            <a href="img/work-2.jpg" data-lightbox="gallery-mf">
+            <a href="img/langgo-img.jpg" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/work-2.jpg" alt="" class="img-fluid">
+                <img src="img/langgo-img.jpg" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Loreda Cuno Nere</h2>
+                    <h2 class="w-title">Landing Page</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                      <span class="w-ctegory">Web Developement</span> / <span class="w-date">Avr 2025</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -439,16 +439,16 @@
         </div>
         <div class="col-md-4">
           <div class="work-box">
-            <a href="img/work-3.jpg" data-lightbox="gallery-mf">
+            <a href="img/langgo-img.jpg" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/work-3.jpg" alt="" class="img-fluid">
+                <img src="img/langgo-img.jpg" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Mavrito Lana Dere</h2>
+                    <h2 class="w-title">Landing Page</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                      <span class="w-ctegory">Web Developement</span> / <span class="w-date">Avr 2025</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -463,16 +463,16 @@
         </div>
         <div class="col-md-4">
           <div class="work-box">
-            <a href="img/work-4.jpg" data-lightbox="gallery-mf">
+            <a href="img/langgo-img.jpg" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/work-4.jpg" alt="" class="img-fluid">
+                <img src="img/langgo-img.jpg" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Bindo Laro Cado</h2>
+                    <h2 class="w-title">Landing Page</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                      <span class="w-ctegory">Web Developement</span> / <span class="w-date">Avr 2025</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -487,16 +487,16 @@
         </div>
         <div class="col-md-4">
           <div class="work-box">
-            <a href="img/work-5.jpg" data-lightbox="gallery-mf">
+            <a href="img/langgo-img.jpg" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/work-5.jpg" alt="" class="img-fluid">
+                <img src="img/langgo-img.jpg" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Studio Lena Mado</h2>
+                    <h2 class="w-title">Landing Page</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                      <span class="w-ctegory">Web Developement</span> / <span class="w-date">Avr 2025</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -511,16 +511,16 @@
         </div>
         <div class="col-md-4">
           <div class="work-box">
-            <a href="img/work-6.jpg" data-lightbox="gallery-mf">
+            <a href="img/langgo-img.jpg" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/work-6.jpg" alt="" class="img-fluid">
+                <img src="img/langgo-img.jpg" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Studio Big Bang</h2>
+                    <h2 class="w-title">Landing Page</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2017</span>
+                      <span class="w-ctegory">Web Developement</span> / <span class="w-date">Avr 2025</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -533,7 +533,6 @@
             </a>
           </div>
         </div>
-        
       </div>
     </div>
   </section>
