@@ -1,3 +1,15 @@
+<?php
+require_once "admin/includes/auth.php";
+require_once "admin/includes/config.php";
+require_once "admin/includes/functions.php";
+
+$res = $conn->query("SELECT id, title, content, image, writer, domain, tags, meta_description, created_at FROM articles ORDER BY id DESC");
+$articles = [];
+while ($article = $res->fetch_assoc()) {
+    $articles[] = $article;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,7 +99,7 @@
       <div class="table-cell">
         <div class="container">
           <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="intro-title mb-4">I am Dadssi Mohamed Abdelhak</h1>
+          <h1 class="intro-title mb-4">I am</br> Dadssi Mohamed Abdelhak</h1>
           <p class="intro-subtitle"><span class="text-slider-items">Full stack Web Developer, Graphic Designer, Digital Marketer ,Content Creator</span><strong class="text-slider"></strong></p>
           <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
         </div>
@@ -281,8 +293,9 @@
             <div class="service-content">
               <h2 class="s-title">Creativity & Innovation</h2>
               <p class="s-description text-center">
-                Ability to generate unique ideas, solve problems, anticipate trends, and design 
-                original solutions aligned with the client’s goals and expectations.
+                Ability to generate unique ideas, solve problems, anticipate trends, and 
+                design original solutions aligned with the client’s goals 
+                and expectations
               </p>
             </div>
           </div>
@@ -335,7 +348,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-3 col-lg-3">
+        <div class="col-sm-3 col-lg-4">
           <div class="counter-box pt-4 pt-md-0">
             <div class="counter-ico">
               <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
@@ -346,7 +359,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-3 col-lg-3">
+        <div class="col-sm-3 col-lg-4">
           <div class="counter-box pt-4 pt-md-0">
             <div class="counter-ico">
               <span class="ico-circle"><i class="ion-ios-people"></i></span>
@@ -594,22 +607,25 @@
         </div>
       </div>
       <div class="row">
+        <!-- ----------------------------------- -->
+      <?php foreach($articles as $article): ?>
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a href="blog-single.html"><img src="img/post-1.jpg" alt="" class="img-fluid"></a>
+              <a href="blog-single.html"><img src="<?php echo $article['image']; ?>" alt="" class="img-fluid"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
                 <div class="card-category">
-                  <h6 class="category">Travel</h6>
+                  <h6 class="category"><?php echo$article['domain'] ?></h6>
                 </div>
               </div>
-              <h3 class="card-title"><a href="blog-single.html">See more ideas about Travel</a></h3>
+              <h3 class="card-title"><a href="blog-single.html"><?php echo$article['title'] ?></a></h3>
               <p class="card-description">
-                Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
-                a pellentesque nec,
-                egestas non nisi.
+                <?php
+            echo resume_texte($article['meta_description'], 20);
+            ?>
+                <a href="admin/blog/blog-single.php?id=<?php echo $article['id']; ?>">Lire plus</a>
               </p>
             </div>
             <div class="card-footer">
@@ -625,6 +641,8 @@
             </div>
           </div>
         </div>
+        <?php endforeach; ?>
+        <!-- ----------------------------------- -->
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
@@ -768,6 +786,7 @@
                       <li><a href="https://www.instagram.com/dadssi_med?igsh=aTRlc2JwamM3NTR5&utm_source=qr"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
                        <li><a href="https://github.com/Dadssi"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
                       <li><a href="https://www.pinterest.com/dadssim/"><span class="ico-circle"><i class="ion-social-pinterest"></i></span></a></li>
+                      <li><a href="https://wa.me/212661884396"><span class="ico-circle"><i class="ion-social-whatsapp"></i></span></a></li>
                     </ul>
                   </div>
                 </div>

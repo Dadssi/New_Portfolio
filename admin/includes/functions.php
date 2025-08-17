@@ -35,3 +35,24 @@ function delete_image(?string $path): void {
     $full = __DIR__ . "/../../" . ltrim($path, "/");
     if (is_file($full)) @unlink($full);
 }
+
+function resume_texte($content, $limite_mots = 30) {
+    // 1. Remplacer les balises et entités HTML par des espaces
+    $content_propre = preg_replace('/<[^>]+>|&nbsp;/', ' ', $content);
+
+    // 2. Normaliser les espaces multiples en un seul
+    $content_propre = preg_replace('/\s+/', ' ', $content_propre);
+
+    // 3. Diviser le texte en mots
+    $mots = explode(" ", $content_propre);
+
+    if (count($mots) > $limite_mots) {
+        return implode(" ", array_slice($mots, 0, $limite_mots)) . '...';
+    }
+    return $content_propre;
+}
+function format_date($date) {
+    $timestamp = strtotime($date);
+    if (!$timestamp) return $date; // Si erreur de format, retourne tel quel
+    return date("d/m/Y H:i", $timestamp); // Format français
+}
