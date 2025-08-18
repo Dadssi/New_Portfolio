@@ -6,6 +6,7 @@ require_once "includes/config.php";
 $total_projects = $conn->query("SELECT COUNT(*) AS total FROM projects")->fetch_assoc()['total'];
 $total_articles = $conn->query("SELECT COUNT(*) AS total FROM articles")->fetch_assoc()['total'];
 $total_comments = $conn->query("SELECT COUNT(*) AS total FROM comments")->fetch_assoc()['total'];
+$total_testimonials = $conn->query("SELECT COUNT(*) AS total FROM testimonials")->fetch_assoc()['total'];
 ?>
 
 <!DOCTYPE html>
@@ -21,9 +22,10 @@ $total_comments = $conn->query("SELECT COUNT(*) AS total FROM comments")->fetch_
             <h2>Menu Admin</h2>
             <ul>
                 <li><a href="index.php">Tableau de Bord</a></li>
-                <li><a href="projets/index.php">Projets</a></li>
+                <li><a href="projects/index.php">Projets</a></li>
                 <li><a href="blog/index.php">Blog</a></li>
                 <li><a href="comments/index.php">Commentaires</a></li>
+                <li><a href="testimonials/index.php">Testimonials</a></li>
                 <li><a href="logout.php">Déconnexion</a></li>
             </ul>
         </aside>
@@ -36,7 +38,7 @@ $total_comments = $conn->query("SELECT COUNT(*) AS total FROM comments")->fetch_
                 <div class="card">
                     <h3><?php echo $total_projects; ?></h3>
                     <p>Projets Réalisés</p>
-                    <a class="button" href="projets/index.php">Gérer</a>
+                    <a class="button" href="projects/index.php">Gérer</a>
                 </div>
 
                 <div class="card">
@@ -49,6 +51,12 @@ $total_comments = $conn->query("SELECT COUNT(*) AS total FROM comments")->fetch_
                     <h3><?php echo $total_comments; ?></h3>
                     <p>Commentaires</p>
                     <a class="button" href="comments/index.php">Gérer</a>
+                </div>
+
+                <div class="card">
+                    <h3><?php echo $total_testimonials; ?></h3>
+                    <p>Testimonials</p>
+                    <a class="button" href="testimonials/index.php">Gérer</a>
                 </div>
             </div>
             <div class="projects">

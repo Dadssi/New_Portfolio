@@ -824,6 +824,7 @@ a:hover {
 .work-content .w-more {
   color: #4e4e4e;
   font-size: .8rem;
+  width: 100%;
 }
 
 .work-content .w-more .w-ctegory {
@@ -831,7 +832,7 @@ a:hover {
 }
 
 .work-content .w-like {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #0078ff;
   float: right;
 }
@@ -847,6 +848,26 @@ a:hover {
 .w-title {
   font-size: 1.2rem;
   color: #000;
+}
+
+#project-info{
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 1fr signifie 1 fraction de l'espace disponible */
+  width: 100%; /* La div parente prend toute la largeur */
+  gap: 40px; /* Ajoute un espace entre les deux div */
+}
+
+#project-info div{
+  padding: 0 5px;
+}
+#demo-btn{
+  background-color: #000;
+  border-radius: 5px;
+}
+#demo-btn a{
+  padding: 2px;
+  color: #FFC107;
 }
 
 /*======================================

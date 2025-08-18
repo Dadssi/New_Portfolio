@@ -56,3 +56,27 @@ function format_date($date) {
     if (!$timestamp) return $date; // Si erreur de format, retourne tel quel
     return date("d/m/Y H:i", $timestamp); // Format français
 }
+
+function temps_depuis_creation($date_creation) {
+    // Crée des objets DateTime pour les dates.
+    $date_actuelle = new DateTime();
+    $date_de_creation = new DateTime($date_creation);
+
+    // Calcule la différence entre les deux dates.
+    $interval = $date_actuelle->diff($date_de_creation);
+
+    // Teste et retourne le bon formatage.
+    if ($interval->y > 0) {
+        // Plus d'un an.
+        $annees = $interval->y;
+        return "il y a " . $annees . " an" . ($annees > 1 ? "s" : "");
+    } elseif ($interval->m > 0) {
+        // Entre 1 et 12 mois.
+        $mois = $interval->m;
+        return "il y a " . $mois . " mois";
+    } else {
+        // Moins d'un mois (moins de 30 jours).
+        $jours = $interval->d;
+        return "il y a " . $jours . " jour" . ($jours > 1 ? "s" : "");
+    }
+}

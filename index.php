@@ -8,6 +8,17 @@ $articles = [];
 while ($article = $res->fetch_assoc()) {
     $articles[] = $article;
 }
+$ress = $conn->query("SELECT id, title, description, image, field, link, created_at FROM projects ORDER BY id DESC");
+$projects = [];
+while ($project = $ress->fetch_assoc()) {
+  $projects[] = $project;
+}
+
+$resss = $conn->query("SELECT id, name, role, content, picture, created_at FROM testimonials ORDER BY id DESC");
+$testimonials = [];
+while ($testimonial = $resss->fetch_assoc()) {
+  $testimonials[] = $testimonial;
+}
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +80,7 @@ while ($article = $res->fetch_assoc()) {
       <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link js-scroll active" href="#home">Home</a>
+            <a class="nav-link js-scroll active" href="index.php#home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#about">About</a>
@@ -402,18 +413,20 @@ while ($article = $res->fetch_assoc()) {
         </div>
       </div>
       <div class="row">
+        <!-- ----------------------------------------- -->
+        <?php foreach($projects as $project): ?>
         <div class="col-md-4">
           <div class="work-box">
-            <a href="img/langgo-img.jpg" data-lightbox="gallery-mf">
+            <a href="<?php echo $project['image']; ?>" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/langgo-img.jpg" alt="" class="img-fluid">
+                <img src="<?php echo $project['image']; ?>" alt="<?php echo $project['image']; ?>" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Landing Page</h2>
+                    <h2 class="w-title"><?php echo$project['title'] ?></h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Web Developement</span> / <span class="w-date">Avr 2025</span>
+                      <span class="w-ctegory" style="margin-right : 15px; font-weight: 500;"><?php echo$project['field'] ?></span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -422,130 +435,22 @@ while ($article = $res->fetch_assoc()) {
                     </div>
                   </div>
                 </div>
+                <div id="project-info">
+                    <div>
+                      <span class="w-date">il y a :  <?php echo temps_depuis_creation($project['created_at']) ?></span>
+                    </div>
+                    <div>
+                      <?php if($project['link'] !== "") :?>
+                      <div id="demo-btn"><a href="<?php echo$project['link'] ?>">Voir Demo</a></div>
+                      <?php endif ?>
+                    </div>
+                  </div>
               </div>
             </a>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="img/langgo-img.jpg" data-lightbox="gallery-mf">
-              <div class="work-img">
-                <img src="img/langgo-img.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Landing Page</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Developement</span> / <span class="w-date">Avr 2025</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="img/langgo-img.jpg" data-lightbox="gallery-mf">
-              <div class="work-img">
-                <img src="img/langgo-img.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Landing Page</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Developement</span> / <span class="w-date">Avr 2025</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="img/langgo-img.jpg" data-lightbox="gallery-mf">
-              <div class="work-img">
-                <img src="img/langgo-img.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Landing Page</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Developement</span> / <span class="w-date">Avr 2025</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="img/langgo-img.jpg" data-lightbox="gallery-mf">
-              <div class="work-img">
-                <img src="img/langgo-img.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Landing Page</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Developement</span> / <span class="w-date">Avr 2025</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="img/langgo-img.jpg" data-lightbox="gallery-mf">
-              <div class="work-img">
-                <img src="img/langgo-img.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Landing Page</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Developement</span> / <span class="w-date">Avr 2025</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
+        <?php endforeach; ?>
+        <!-- ----------------------------------------- -->
       </div>
     </div>
   </section>
@@ -558,19 +463,20 @@ while ($article = $res->fetch_assoc()) {
       <div class="row">
         <div class="col-md-12">
           <div id="testimonial-mf" class="owl-carousel owl-theme">
+            <?php foreach($testimonials as $testimonial): ?>
             <div class="testimonial-box">
               <div class="author-test">
-                <img src="img/testimonial-2.jpg" alt="" class="rounded-circle b-shadow-a">
-                <span class="author">Xavi Alonso</span>
+                <img src="<?php echo$testimonial['picture'] ?>" alt="" class="rounded-circle b-shadow-a">
+                <span class="author"><?php echo$testimonial['name'] ?></span>
               </div>
               <div class="content-test">
                 <p class="description lead">
-                  Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit.
+                  <?php echo$testimonial['content'] ?>
                 </p>
                 <span class="comit"><i class="fa fa-quote-right"></i></span>
               </div>
             </div>
+            <?php endforeach; ?>
             <div class="testimonial-box">
               <div class="author-test">
                 <img src="img/testimonial-4.jpg" alt="" class="rounded-circle b-shadow-a">
@@ -600,19 +506,18 @@ while ($article = $res->fetch_assoc()) {
               Blog
             </h3>
             <p class="subtitle-a">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              there is the latest work I finished
             </p>
             <div class="line-mf"></div>
           </div>
         </div>
       </div>
       <div class="row">
-        <!-- ----------------------------------- -->
       <?php foreach($articles as $article): ?>
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a href="blog-single.html"><img src="<?php echo $article['image']; ?>" alt="" class="img-fluid"></a>
+              <a href="blog-single.html"><img src="<?php echo $article['image']; ?>" alt="<?php echo $article['title']; ?>" class="img-fluid"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -631,80 +536,17 @@ while ($article = $res->fetch_assoc()) {
             <div class="card-footer">
               <div class="post-author">
                 <a href="#">
-                  <img src="img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
-                  <span class="author">Morgan Freeman</span>
+                  <img src="img/dadssi.jpg" alt="" class="avatar rounded-circle">
+                  <span class="author">Dadssi Mohamed</span>
                 </a>
               </div>
               <div class="post-date">
-                <span class="ion-ios-clock-outline"></span> 10 min
+                <span class="ion-ios-clock-outline"></span> <?php echo temps_depuis_creation($article['created_at']) ?>
               </div>
             </div>
           </div>
         </div>
         <?php endforeach; ?>
-        <!-- ----------------------------------- -->
-        <div class="col-md-4">
-          <div class="card card-blog">
-            <div class="card-img">
-              <a href="blog-single.html"><img src="img/post-2.jpg" alt="" class="img-fluid"></a>
-            </div>
-            <div class="card-body">
-              <div class="card-category-box">
-                <div class="card-category">
-                  <h6 class="category">Web Design</h6>
-                </div>
-              </div>
-              <h3 class="card-title"><a href="blog-single.html">See more ideas about Travel</a></h3>
-              <p class="card-description">
-                Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
-                a pellentesque nec,
-                egestas non nisi.
-              </p>
-            </div>
-            <div class="card-footer">
-              <div class="post-author">
-                <a href="#">
-                  <img src="img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
-                  <span class="author">Morgan Freeman</span>
-                </a>
-              </div>
-              <div class="post-date">
-                <span class="ion-ios-clock-outline"></span> 10 min
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card card-blog">
-            <div class="card-img">
-              <a href="blog-single.html"><img src="img/post-3.jpg" alt="" class="img-fluid"></a>
-            </div>
-            <div class="card-body">
-              <div class="card-category-box">
-                <div class="card-category">
-                  <h6 class="category">Web Design</h6>
-                </div>
-              </div>
-              <h3 class="card-title"><a href="blog-single.html">See more ideas about Travel</a></h3>
-              <p class="card-description">
-                Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
-                a pellentesque nec,
-                egestas non nisi.
-              </p>
-            </div>
-            <div class="card-footer">
-              <div class="post-author">
-                <a href="#">
-                  <img src="img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
-                  <span class="author">Morgan Freeman</span>
-                </a>
-              </div>
-              <div class="post-date">
-                <span class="ion-ios-clock-outline"></span> 10 min
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -726,7 +568,7 @@ while ($article = $res->fetch_assoc()) {
                     </h5>
                   </div>
                   <div>
-                      <form action="" method="post" role="form" class="contactForm">
+                      <form action="contact-handler.php" method="post" role="form" class="contactForm">
                       <div id="sendmessage">Your message has been sent. Thank you!</div>
                       <div id="errormessage"></div>
                       <div class="row">
@@ -838,6 +680,29 @@ while ($article = $res->fetch_assoc()) {
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+  <!-- ------------------- -->
+   <script>
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get('status');
+    const msg = urlParams.get('msg');
+
+    if (status === 'success') {
+        const sendmessageDiv = document.getElementById('sendmessage');
+        if (sendmessageDiv) {
+            sendmessageDiv.style.display = 'block';
+            sendmessageDiv.textContent = msg;
+        }
+    } else if (status === 'error') {
+        const errormessageDiv = document.getElementById('errormessage');
+        if (errormessageDiv) {
+            errormessageDiv.style.display = 'block';
+            errormessageDiv.textContent = msg;
+        }
+    }
+};
+</script>
+  <!-- ------------------- -->
 
 </body>
 </html>
