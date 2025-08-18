@@ -1,5 +1,7 @@
 <?php
 
+require_once 'config.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -7,12 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/PHPMailer/src/Exception.php';
 require 'vendor/PHPMailer/src/PHPMailer.php';
 require 'vendor/PHPMailer/src/SMTP.php';
-
-// Les données de ton compte Hostinger
-$smtp_host = 'smtp.hostinger.com';
-$smtp_port = 587; // Ou 465 si tu utilises SSL
-$smtp_username = 'mohamed@dadssi.com'; // Ton adresse email complète
-$smtp_password = 'HostCd-401747'; // Le mot de passe de cet email Hostinger
+ 
 
 // Le destinataire de l'email
 $destinataire = 'mohamed@dadssi.com';
@@ -63,6 +60,8 @@ try {
 
     // Envoi de l'email
     $mail->send();
+
+    echo "Message envoyé avec succès !";
 
     // Redirection vers la page du formulaire avec un message de succès
     header('Location: index.php?status=success&msg=Votre message a été envoyé avec succès !');
